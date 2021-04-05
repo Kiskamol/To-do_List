@@ -1,13 +1,148 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Permanent Marker', cursive;
+}
+body {
+  background-image: linear-gradient(120deg, #c9fd76 0%, rgb(253, 201, 80) 100%);
+  color: white;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+}
+header {
+  font-size: 2rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+header,
+form {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form input,
+form button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+form input{
+  border-radius: 3px 0 0 3px;
+}
+form button {
+  color: rgb(255, 98, 55);
+  background: #f7fffe;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0 3px 3px 0;
+}
+form button:hover {
+  background: rgb(255, 98, 55);
+  color: white;
+}
+span,h1{
+  color: rgb(255, 98, 55);
+  margin-right: 20px;
+}
+span:nth-child(3){
+  margin-right: 0px;
+}
+h1{
+  border-bottom: rgb(255, 98, 55) double 5px ;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo {
+  margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;}
+  .todo:hover{
+    transform: translate(-21px, 0px);  }
+.filter-todo {
+  padding: 1rem;
+}
+.todo li {
+  flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+  background: rgb(255, 98, 55);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.complete-btn {
+  background: rgb(11, 212, 162);
+}
+.todo-item {
+  padding: 0rem 0.5rem;
+}
+
+.fa-trash,
+.fa-check {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*CUSTOM SELECTOR */
+select {
+  outline: 0;
+  border: 0 !important;
+  background-image: none;
+}
+
+/* Custom Select */
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: rgb(255, 98, 55);
+  cursor: pointer;
+  width: 12rem;
+  height: 4rem;
+  font-size: 1rem;
+}
+/* Arrow */
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.3rem;
+  background: rgb(255, 98, 55);
+  cursor: pointer;
+  pointer-events: none;
+  transition: 0.3s;
+}
+ 
+.select:hover:after{
+  background: #ffffff;
+  color: rgb(255, 98, 55);
+  transition: 0.3s;
 }
